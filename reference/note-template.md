@@ -23,8 +23,18 @@ That's exactly what the optimistic-updates pattern solves.">
 // Show the minimal shape of the pattern, not a full app.
 ```
 
+<!-- ## Demo — OPTIONAL. Omit this whole section when the note is first written.
+     Add it ONLY after the user accepts the demo offer and you've written the .html.
+     Do NOT embed with an <iframe>: Obsidian strips <script>/onclick and sandboxes
+     iframes, so JS never runs inside a note. Link to the standalone file instead;
+     it opens in the browser with full interactivity. Write the text in the user's
+     language. When present, the section looks like:
+
 ## Demo
-<iframe src="<concept-slug>-demo.html" width="100%" height="460" frameborder="0" style="border-radius:8px;"></iframe>
+▶ **[Open interactive demo](<concept-slug>-demo.html)** — opens in your browser, full JS.
+
+<One line describing what the demo lets you do / what to watch for.>
+-->
 
 ## Design decisions
 - **Why it's done this way:** <the reasoning behind the pattern>

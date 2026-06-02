@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<!-- everlearn demo template. RULES: self-contained, no CDNs, max 80 lines,
-     interactive, dark-friendly, built around the user's domain & naming.
+<!-- everlearn demo template. A complete standalone page opened in the browser
+     (the note links to it — Obsidian can't run JS inside a note).
+     RULES: self-contained, no CDNs, max 80 lines, interactive, dark-friendly,
+     built around the user's domain & naming.
      Replace ALL placeholder copy with the user's language and concept. -->
 <html lang="en">
 <head>
@@ -39,13 +41,14 @@
 
 <script>
   // Keep state and logic minimal — demonstrate ONE idea by manipulation.
-  const stage = document.getElementById('stage');
-  const note  = document.getElementById('note');
+  // NO single quotes anywhere (srcdoc embedding) — use " and backticks.
+  const stage = document.getElementById("stage");
+  const note  = document.getElementById("note");
   let i = 0;
   const steps = [
-    { text: 'initial state',      note: 'Starting point.' },
-    { text: 'intermediate state', note: 'What changed and why.' },
-    { text: 'final state',        note: 'The result of the concept.' },
+    { text: "initial state",      note: "Starting point." },
+    { text: "intermediate state", note: "What changed and why." },
+    { text: "final state",        note: "The result of the concept." },
   ];
   function render() {
     stage.textContent = steps[i].text;
