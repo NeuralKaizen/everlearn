@@ -1,51 +1,61 @@
 # everlearn
 
-A Claude skill that generates learning material **while you build** — without breaking your flow.
+A Claude skill that turns *learning in the moment* into a connected part of your
+**second brain** — without breaking your flow.
 
-When you're constructing something and get stuck on a concept, everlearn gives you exactly
-what you need to understand and keep going — not a full course. It's built for fast-moving,
-AI-assisted developers who reach unfamiliar territory and need the concept explained **in the
-terms of what they're already building**, then saved so they can return to it.
+When you're mid-workflow and get stuck on a concept, everlearn explains it in the terms
+of what you're actually doing, then saves it as an **interlinked note** in your Obsidian
+vault. A passing question becomes a permanent, connected piece of your knowledge graph
+instead of a throwaway answer. The concept can be technical or not — a code pattern, a
+domain idea, a mental model.
 
 ## When it activates
 
-- You're mid-development and don't understand something
+- You're mid-workflow and don't understand something
 - You ask "how does X work", "explain Y", "I don't get Z"
 - You want to save a concept into your notes
 
-## What it produces — two files
+## What it produces
 
-- `<concept>.md` — a structured note: what it is (no filler), why it matters in *your* context,
-  the key code pattern, an embedded interactive HTML demo, the design decisions behind the
-  pattern, and common mistakes.
-- `<concept>-demo.html` — a self-contained interactive demo (≤80 lines) that shows the concept
-  visually using *your* domain, *your* variable names, *your* problem.
+- **A note** (`<concept>.md`) — always. A short, domain-agnostic note: what it is (no
+  filler), why it matters in *your* context, the core with an example (code when it
+  fits), **`[[wikilinks]]` to related notes** so it joins your graph, the reasoning
+  behind it, and common mistakes.
+- **An interactive demo** (`<concept>-demo.html`) — on request, for technical/visual
+  concepts. A self-contained page (≤80 lines) you open in your browser, built around
+  *your* domain and naming.
+- **A deeper branch** — on request. Going deeper either expands the note, or spins up
+  new linked sub-concept notes for the prerequisites you're missing — so a question
+  grows your graph, not one giant note.
 
-**Obsidian-first but portable:** in Obsidian the demo renders inline; in any other editor the
-files are plain Markdown + a standalone HTML you can open in a browser. Nothing breaks without
-Obsidian.
+## Principles
+
+- **Doesn't break your flow** — answers inline first; the note is the durable artifact.
+- **Respects your second brain** — never restructures your vault; asks before creating a
+  folder or touching an existing note.
+- **Connects everything** — new notes link into the notes you already have.
+- **Expensive things are opt-in** — the note is always written; demos and deep branches
+  are offered, not forced.
 
 ## Install
-
-Clone and link the skill into your Claude skills directory:
 
 ```bash
 git clone https://github.com/NeuralKaizen/everlearn.git
 ln -s "$(pwd)/everlearn" ~/.claude/skills/everlearn
 ```
 
-That's it. It triggers automatically when you get stuck mid-build, or invoke it explicitly with
-`/everlearn`.
+It triggers automatically when you get stuck mid-work, or invoke it with `/everlearn`.
 
 ## Where it saves (zero-config)
 
-On first use, everlearn resolves your destination directory automatically and **remembers it**:
+On first use, everlearn finds your destination and **remembers it**:
 
-1. `$EVERLEARN_DIR` environment variable, if set
+1. `$EVERLEARN_DIR`, if set
 2. `~/.config/everlearn/config.json`, if it exists
-3. **Auto-detected Obsidian vault** (reads Obsidian's vault registry). One vault → it proposes
-   `<vault>/concepts/`; several → it asks which.
-4. If none of the above, it asks you for a path.
+3. **Your Obsidian vault** — it detects the vault, then *asks* where inside it the notes
+   should live (proposing an existing folder if you have one). It never assumes a folder
+   or creates one without your OK.
+4. Otherwise, it asks for a path.
 
 Once chosen, it writes `~/.config/everlearn/config.json` so you're never asked again.
 
@@ -65,13 +75,14 @@ everlearn/
 ├── config.example.json      # optional manual config override
 └── reference/
     ├── note-template.md     # structure of the concept note
-    └── demo-template.html   # structure/constraints of the HTML demo
+    └── demo-template.html   # structure/constraints of the optional HTML demo
 ```
 
 ## Philosophy
 
-Learning shouldn't interrupt building. The material arrives contextualized to what you're
-doing, it's interactive, and it stays in your notes for when you need it again.
+Learning shouldn't interrupt building — and it shouldn't evaporate either. everlearn
+delivers the concept contextualized to what you're doing, then files it, linked, into the
+brain you already trust.
 
 ## License
 
