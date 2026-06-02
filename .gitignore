@@ -1,0 +1,6 @@
+# Local config is per-machine — never commit it
+config.json
+.DS_Store
+
+# Claude Code local permissions (machine-specific, has personal paths)
+.claude/settings.local.json

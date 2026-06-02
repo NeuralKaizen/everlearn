@@ -1,0 +1,4 @@
+{
+  "//": "Optional. everlearn auto-detects your Obsidian vault on first use and writes this file for you. Create it manually only if you want to override the destination. Copy to ~/.config/everlearn/config.json",
+  "conceptsDir": "~/MyVault/concepts"
+}

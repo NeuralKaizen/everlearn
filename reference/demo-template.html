@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <!-- everlearn demo template. RULES: self-contained, no CDNs, max 80 lines,
-     interactive, dark-friendly, uses the user's domain & naming. -->
-<html lang="es">
+     interactive, dark-friendly, built around the user's domain & naming.
+     Replace ALL placeholder copy with the user's language and concept. -->
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <style>
@@ -28,13 +29,13 @@
 <body>
   <!-- Replace this whole block with a demo of the ACTUAL concept,
        built around the user's domain (their cart, their queue, their state). -->
-  <h2>Concepto: &lt;nombre&gt;</h2>
-  <div class="stage" id="stage">estado inicial</div>
+  <h2>Concept: &lt;name&gt;</h2>
+  <div class="stage" id="stage">initial state</div>
   <div class="controls">
-    <button onclick="step()">Siguiente paso</button>
+    <button onclick="step()">Next step</button>
     <button onclick="reset()">Reset</button>
   </div>
-  <p class="note" id="note">Pulsa para ver cómo cambia el estado.</p>
+  <p class="note" id="note">Click to see how the state changes.</p>
 
 <script>
   // Keep state and logic minimal — demonstrate ONE idea by manipulation.
@@ -42,13 +43,13 @@
   const note  = document.getElementById('note');
   let i = 0;
   const steps = [
-    { text: 'estado inicial', note: 'Punto de partida.' },
-    { text: 'estado intermedio', note: 'Qué cambió y por qué.' },
-    { text: 'estado final', note: 'El resultado del concepto.' },
+    { text: 'initial state',      note: 'Starting point.' },
+    { text: 'intermediate state', note: 'What changed and why.' },
+    { text: 'final state',        note: 'The result of the concept.' },
   ];
   function render() {
     stage.textContent = steps[i].text;
-    note.textContent = steps[i].note;
+    note.textContent  = steps[i].note;
   }
   function step()  { i = (i + 1) % steps.length; render(); }
   function reset() { i = 0; render(); }
