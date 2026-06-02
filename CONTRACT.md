@@ -31,6 +31,10 @@ project: "[[project-name]]"      # optional — the project this note belongs to
 | `log`      | log       | `logs/`       | a quick learning, error, or reflection      |
 | `project`  | arc       | `projects/`   | a project's context + lifecycle (living hub) |
 
+**Type-specific frontmatter** (on top of the core fields above): `decision` notes add
+`status` (`accepted | superseded`); `log` notes add `kind` (`learning | error |
+reflection`). Every note always carries the core fields regardless.
+
 All folders live under the same vault root. The root is resolved once and cached in a
 shared config at `~/.config/loom/config.json` (`{ "vault": "<abs path>" }`); every skill
 reads it and writes to `<vault>/<folder>/`. (everlearn still caches `conceptsDir` in

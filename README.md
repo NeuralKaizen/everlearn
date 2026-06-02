@@ -18,7 +18,7 @@ threads of one loom.
 | **recall**    | retrieval   | "Why do I do X?" / "What did I learn about Y?"              |
 | **thread**    | maintenance | Keep notes organized and colored by topic across the vault  |
 
-> Status: **everlearn** and **decide** are built. The rest are in progress.
+> Status: **everlearn**, **decide**, and **log** are built. **arc**, **recall**, **thread** in progress.
 
 ## How it fits together
 
