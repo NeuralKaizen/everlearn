@@ -1,5 +1,6 @@
 ---
 name: log
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(python3 *), Bash(mkdir *), Bash(ls *), Bash(grep *), Bash(cat *)
 description: >-
   Quickly capture a LEARNING, ERROR, or REFLECTION the moment it happens — the fastest,
   lightest capture in the loom second-brain collection. Trigger on "aprendí que X",

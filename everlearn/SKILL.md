@@ -1,5 +1,6 @@
 ---
 name: everlearn
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(python3 *), Bash(mkdir *), Bash(ls *), Bash(grep *), Bash(cat *)
 description: >-
   Generate contextualized learning material WHILE the user works — without breaking
   their flow — and weave it into their Obsidian "second brain". Trigger when the user

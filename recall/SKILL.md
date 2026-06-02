@@ -1,5 +1,7 @@
 ---
 name: recall
+allowed-tools: Read, Grep, Glob, Bash(grep *), Bash(rg *), Bash(cat *), Bash(ls *), Bash(python3 *)
+disallowed-tools: Write, Edit
 description: >-
   Retrieve context from your own second brain — answer from YOUR notes, not general
   knowledge. Part of the loom collection. Trigger on retrospective/possessive questions:

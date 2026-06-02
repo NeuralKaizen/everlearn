@@ -1,5 +1,6 @@
 ---
 name: decide
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(python3 *), Bash(mkdir *), Bash(ls *), Bash(grep *), Bash(cat *)
 description: >-
   Capture a technical DECISION with its context, the moment it's made — part of the
   loom second-brain collection. Trigger when the user settles a technical choice:

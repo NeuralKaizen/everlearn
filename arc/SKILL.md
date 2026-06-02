@@ -1,5 +1,6 @@
 ---
 name: arc
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(python3 *), Bash(mkdir *), Bash(ls *), Bash(grep *), Bash(cat *)
 description: >-
   Maintain the living HUB for a project — its context, lifecycle, and links to everything
   captured under it. Part of the loom second-brain collection. Trigger to CREATE

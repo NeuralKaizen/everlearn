@@ -1,5 +1,6 @@
 ---
 name: thread
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(python3 *), Bash(mkdir *), Bash(ls *), Bash(grep *), Bash(cat *)
 description: >-
   Maintain the loom second-brain vault: COLOR it by topic and TEND its health. Part of
   the loom collection. Trigger on "thread", "coloreá/ordená el vault", "pintá el grafo",
